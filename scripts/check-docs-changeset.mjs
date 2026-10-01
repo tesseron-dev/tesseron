@@ -41,6 +41,7 @@ function readFileAtReference(reference, filePath) {
     return execFileSync('git', ['show', `${reference}:${filePath}`], {
       cwd: repositoryRoot,
       encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
     });
   } catch {
     return '';
