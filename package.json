@@ -22,7 +22,7 @@
     "gate": "pnpm typecheck && pnpm test && pnpm lint && pnpm sync-plugin-version --check && pnpm conformance:validate && pnpm check-docs-changeset",
     "format": "biome format --write .",
     "sync-plugin-version": "node scripts/sync-plugin-version.mjs",
-    "check-docs-changeset": "node scripts/check-docs-changeset.mjs",
+    "check-docs-changeset": "node --test scripts/check-docs-changeset.test.mjs && node scripts/check-docs-changeset.mjs",
     "docs:drift": "node scripts/docs-drift.mjs",
     "sync-labels": "node scripts/sync-labels.mjs",
     "conformance:validate": "node conformance/validate.mjs",
