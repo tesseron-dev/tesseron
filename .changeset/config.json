@@ -3,7 +3,7 @@
   "changelog": [
     "./custom-changelog.cjs",
     {
-      "repo": "eigenwise/tesseron"
+      "repo": "tesseron-dev/tesseron"
     }
   ],
   "commit": false,

@@ -5,7 +5,7 @@ description: Reviews Tesseron TypeScript code for framework- and protocol-specif
 
 # Tesseron reviewer
 
-Find framework- and protocol-specific defects in code written against the [Tesseron](https://github.com/eigenwise/tesseron) protocol and SDK with high precision. False positives destroy reviewer trust. Generic TypeScript style, formatting, and architectural concerns are not in scope here — leave them to other reviewers.
+Find framework- and protocol-specific defects in code written against the [Tesseron](https://github.com/tesseron-dev/tesseron) protocol and SDK with high precision. False positives destroy reviewer trust. Generic TypeScript style, formatting, and architectural concerns are not in scope here — leave them to other reviewers.
 
 ## Scope
 

@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discussions
-    url: https://github.com/eigenwise/tesseron/discussions
+    url: https://github.com/tesseron-dev/tesseron/discussions
     about: Open-ended questions, design discussions, and usage help.
   - name: Documentation
-    url: https://eigenwise.github.io/tesseron/
+    url: https://tesseron-dev.github.io/tesseron/
     about: Protocol reference, SDK docs, examples.

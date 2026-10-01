@@ -9,9 +9,9 @@ related:
   - protocol/compatibility
 ---
 
-Source: [github.com/Eigenwise/tesseron-rust](https://github.com/Eigenwise/tesseron-rust)
+Source: [github.com/tesseron-dev/tesseron-rust](https://github.com/tesseron-dev/tesseron-rust)
 
-[Report an issue](https://github.com/Eigenwise/tesseron/issues/new/choose?labels=area%3A%20sdk-rust)
+[Report an issue](https://github.com/tesseron-dev/tesseron/issues/new/choose?labels=area%3A%20sdk-rust)
 
 <!-- snippets from examples/todo -->
 

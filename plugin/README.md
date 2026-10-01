@@ -1,10 +1,10 @@
 # tesseron (Claude Code plugin)
 
-Drops the [Tesseron](https://github.com/eigenwise/tesseron) MCP gateway into Claude Code as a single-command install **and** gives Claude deep, just-in-time knowledge of the Tesseron protocol and SDK. When you work in a Tesseron codebase, Claude picks up the right patterns for actions, resources, `ActionContext`, transports, React hooks, protocol wire format, errors, gateway config, testing, and project layout — without you pasting docs or repeating conventions.
+Drops the [Tesseron](https://github.com/tesseron-dev/tesseron) MCP gateway into Claude Code as a single-command install **and** gives Claude deep, just-in-time knowledge of the Tesseron protocol and SDK. When you work in a Tesseron codebase, Claude picks up the right patterns for actions, resources, `ActionContext`, transports, React hooks, protocol wire format, errors, gateway config, testing, and project layout — without you pasting docs or repeating conventions.
 
 ## What you get
 
-- **MCP gateway** — the [`@tesseron/mcp`](https://www.npmjs.com/package/@tesseron/mcp) gateway, launched on demand by Claude Code via `npx`. Any app speaking the Tesseron wire protocol over WebSocket — via [`@tesseron/web`](https://github.com/Eigenwise/tesseron-typescript/tree/main/web), [`@tesseron/server`](https://github.com/Eigenwise/tesseron-typescript/tree/main/server), or [`@tesseron/react`](https://github.com/Eigenwise/tesseron-typescript/tree/main/react) — can expose typed, prefixed actions as MCP tools that Claude can call.
+- **MCP gateway** — the [`@tesseron/mcp`](https://www.npmjs.com/package/@tesseron/mcp) gateway, launched on demand by Claude Code via `npx`. Any app speaking the Tesseron wire protocol over WebSocket — via [`@tesseron/web`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/web), [`@tesseron/server`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/server), or [`@tesseron/react`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/react) — can expose typed, prefixed actions as MCP tools that Claude can call.
 - **`framework` skill** — auto-triggered when Claude sees Tesseron code. The *cheat sheet*: core abstractions, canonical imports, and the minimum-viable-app template, plus eleven focused reference files (actions, resources, context, transports, react, protocol, schemas, errors, gateway, testing, project-structure). Progressive disclosure keeps the parent context lean. Load this for orientation and mental model questions.
 - **`tesseron-docs` skill** — auto-triggered when a Tesseron question needs a precise answer (exact wire format, error codes, handshake shape, resume flow). The *manual*: it calls [`@tesseron/docs-mcp`](https://www.npmjs.com/package/@tesseron/docs-mcp)'s `search_docs` and `read_doc` tools so the answer comes from the live docs, not training data.
 - **`tesseron-dev` skill** — auto-triggered when you ask to add Tesseron to a project (existing, or one you're creating). Picks the right `@tesseron/*` consumer package — `@tesseron/react` for React (hooks API), `@tesseron/server` for Node, `@tesseron/web` for any other browser context — installs it with the project's existing package manager, and inserts the canonical Tesseron API (`tesseron.app(...)` + one action + one resource + `tesseron.connect(...)`) at module scope of the entry point. Strictly Tesseron-scoped: does not create projects, scaffold build tooling, pick framework versions, or template framework-specific idioms. Creating projects is someone else's job.
@@ -20,7 +20,7 @@ Skills are the durable cross-client primitive — Claude Code, Codex, and OpenCo
 Requires **Node 20+** with `npx` on `PATH` (any standard Node install qualifies — `npx` ships with `npm`). On first start the plugin fetches `@tesseron/mcp` from npm, which adds a one-time cold-start cost; subsequent launches use the npm cache.
 
 ```text
-/plugin marketplace add eigenwise/tesseron
+/plugin marketplace add tesseron-dev/tesseron
 /plugin install tesseron@tesseron
 ```
 
@@ -39,7 +39,7 @@ This is a known shim quirk in some Node-on-Windows setups, not Tesseron-specific
 Codex's plugin loader accepts the same `.claude-plugin/plugin.json` manifest, so the same plugin source serves both clients:
 
 ```bash
-codex plugin marketplace add eigenwise/tesseron
+codex plugin marketplace add tesseron-dev/tesseron
 ```
 
 Codex auto-loads the `framework`, `tesseron-docs`, `tesseron-dev`, `tesseron-explorer`, and `tesseron-reviewer` skills and starts the `tesseron` and `tesseron-docs` MCP servers via the same `npx` invocations Claude Code uses. Codex does not have a custom-slash-command primitive, so the skills are the entire integration surface there.
@@ -88,7 +88,7 @@ A standalone `@tesseron/skills` npm package that vendors the same SKILL.md tree 
 
 4. **Drive your app from chat.** Each tool call runs the handler you declared — mutating whatever state your app owns. The browser (or service) updates in real time.
 
-For complete runnable walkthroughs, see the repo's [TypeScript examples/](https://github.com/Eigenwise/tesseron-typescript/tree/main/examples).
+For complete runnable walkthroughs, see the repo's [TypeScript examples/](https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples).
 
 ## Typical flows
 
@@ -132,7 +132,7 @@ Read the `framework` skill's `SKILL.md` if you want to see the routing table and
 
 - TypeScript 5.7+ (strict mode, `noUncheckedIndexedAccess` recommended).
 - Node 20+ for server / gateway processes.
-- Protocol version `1.2.0`. See the [compatibility contract](https://eigenwise.github.io/tesseron/protocol/compatibility/) for cross-language rules.
+- Protocol version `1.2.0`. See the [compatibility contract](https://tesseron-dev.github.io/tesseron/protocol/compatibility/) for cross-language rules.
 - `@tesseron/core`, `/web`, `/server`, `/react`, `/svelte`, `/vue`, `/vite`, `/mcp` share a version and should be installed together.
 
 ## Development
@@ -157,6 +157,6 @@ MIT © Kenny Vaneetvelde — see [`LICENSE`](./LICENSE).
 
 ## Links
 
-- Protocol + SDKs: https://github.com/eigenwise/tesseron
-- Examples: https://github.com/Eigenwise/tesseron-typescript/tree/main/examples
+- Protocol + SDKs: https://github.com/tesseron-dev/tesseron
+- Examples: https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples
 - Changelog: [`CHANGELOG.md`](./CHANGELOG.md)

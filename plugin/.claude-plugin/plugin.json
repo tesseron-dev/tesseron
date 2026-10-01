@@ -8,8 +8,8 @@
     "name": "Kenny Vaneetvelde",
     "email": "kenny@eigenwise.io"
   },
-  "homepage": "https://github.com/eigenwise/tesseron",
-  "repository": "https://github.com/eigenwise/tesseron",
+  "homepage": "https://github.com/tesseron-dev/tesseron",
+  "repository": "https://github.com/tesseron-dev/tesseron",
   "license": "MIT",
   "keywords": [
     "mcp",

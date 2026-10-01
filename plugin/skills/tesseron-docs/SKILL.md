@@ -30,7 +30,7 @@ The plugin bundles `@tesseron/docs-mcp` at install time, so these tools are norm
 If calls to `mcp__plugin_tesseron_tesseron-docs__*` fail (e.g. the user has disabled the MCP server) fall back in order:
 
 1. Read directly from `docs/src/content/docs/**/*.{md,mdx}` if the workspace is the Tesseron monorepo itself.
-2. Fetch the deployed site: `https://eigenwise.github.io/tesseron/llms-full.txt` has the complete docs as plain text; `https://eigenwise.github.io/tesseron/<section>/<slug>/` serves the rendered page.
+2. Fetch the deployed site: `https://tesseron-dev.github.io/tesseron/llms-full.txt` has the complete docs as plain text; `https://tesseron-dev.github.io/tesseron/<section>/<slug>/` serves the rendered page.
 3. Defer to the `framework` skill's bundled reference files (`plugin/skills/framework/references/*.md`).
 
 Never answer precision questions from training data alone without noting that you could not retrieve the current spec.
@@ -39,6 +39,6 @@ Never answer precision questions from training data alone without noting that yo
 
 When you read a page via `read_doc`, cite it by slug and link the hosted URL so the user can verify. Example:
 
-> Per `protocol/handshake` (https://eigenwise.github.io/tesseron/protocol/handshake/), the welcome frame carries `sessionId`, `claimCode`, `resumeToken`, and the negotiated `capabilities`.
+> Per `protocol/handshake` (https://tesseron-dev.github.io/tesseron/protocol/handshake/), the welcome frame carries `sessionId`, `claimCode`, `resumeToken`, and the negotiated `capabilities`.
 
 The slug is stable; the published URL tracks the same path.

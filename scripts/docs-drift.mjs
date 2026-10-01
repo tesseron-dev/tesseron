@@ -85,27 +85,27 @@ function hubDocsLastTouched(relativeDirectory) {
 const sdkReleases = [
   {
     language: 'typescript',
-    repository: 'Eigenwise/tesseron-typescript',
+    repository: 'tesseron-dev/tesseron-typescript',
     docs: 'sdk/typescript',
     latest: () => npmLatest('@tesseron/core'),
   },
   {
     language: 'rust',
-    repository: 'Eigenwise/tesseron-rust',
+    repository: 'tesseron-dev/tesseron-rust',
     docs: 'sdk/rust',
     latest: () => cratesLatest('tesseron'),
   },
   {
     language: 'python',
-    repository: 'Eigenwise/tesseron-python',
+    repository: 'tesseron-dev/tesseron-python',
     docs: 'sdk/python',
     latest: () => pypiLatest('tesseron'),
   },
   {
     language: 'cpp',
-    repository: 'Eigenwise/tesseron-cpp',
+    repository: 'tesseron-dev/tesseron-cpp',
     docs: 'sdk/cpp',
-    latest: () => githubLatestTag('Eigenwise/tesseron-cpp'),
+    latest: () => githubLatestTag('tesseron-dev/tesseron-cpp'),
   },
 ];
 

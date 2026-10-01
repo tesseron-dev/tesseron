@@ -154,7 +154,7 @@ describe('protocol version handshake', () => {
     expect(resp.result).toBeUndefined();
     expect(resp.error?.code).toBe(-32000);
     expect(resp.error?.message).toBe(
-      'Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch. See https://eigenwise.github.io/tesseron/protocol/compatibility/',
+      'Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch. See https://tesseron-dev.github.io/tesseron/protocol/compatibility/',
     );
   });
 
@@ -165,7 +165,7 @@ describe('protocol version handshake', () => {
     expect(resp.result).toBeUndefined();
     expect(resp.error?.code).toBe(-32000);
     expect(resp.error?.message).toBe(
-      'Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch on resume. See https://eigenwise.github.io/tesseron/protocol/compatibility/',
+      'Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch on resume. See https://tesseron-dev.github.io/tesseron/protocol/compatibility/',
     );
   });
 });

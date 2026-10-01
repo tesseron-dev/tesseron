@@ -41,7 +41,7 @@ jobs:
       - name: Build Starlight
         working-directory: docs
         env:
-          DOCS_SITE: https://eigenwise.github.io
+          DOCS_SITE: https://tesseron-dev.github.io
           DOCS_BASE: /tesseron
         run: pnpm run build
 

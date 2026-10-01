@@ -9,7 +9,7 @@ related:
 
 <!-- snippets from examples/todo -->
 
-The [conformance corpus](https://github.com/eigenwise/tesseron/tree/main/conformance) is the executable half of the protocol spec. It is language-neutral. The runner plays the gateway, and the Rust host adapts each fixture into actions and resources through the public SDK API.
+The [conformance corpus](https://github.com/tesseron-dev/tesseron/tree/main/conformance) is the executable half of the protocol spec. It is language-neutral. The runner plays the gateway, and the Rust host adapts each fixture into actions and resources through the public SDK API.
 
 ## Run it
 

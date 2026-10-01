@@ -30,14 +30,14 @@ The C++ host does not mint its own claim code and does not speak a unix domain s
 
 ## TypeScript package versions
 
-The seven TypeScript SDK packages (`core`, `web`, `server`, `react`, `svelte`, `vue`, and `vite`) are one fixed release group in [tesseron-typescript](https://github.com/Eigenwise/tesseron-typescript). Install them at the same version. The hub packages `@tesseron/mcp`, `@tesseron/docs-mcp`, and `@tesseron/conformance` release independently. Gateway compatibility follows the protocol version rule above.
+The seven TypeScript SDK packages (`core`, `web`, `server`, `react`, `svelte`, `vue`, and `vite`) are one fixed release group in [tesseron-typescript](https://github.com/tesseron-dev/tesseron-typescript). Install them at the same version. The hub packages `@tesseron/mcp`, `@tesseron/docs-mcp`, and `@tesseron/conformance` release independently. Gateway compatibility follows the protocol version rule above.
 
 ## When the handshake fails
 
 A host and gateway with different protocol majors get this JSON-RPC error from the gateway:
 
 ```text
-Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch. See https://eigenwise.github.io/tesseron/protocol/compatibility/
+Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch. See https://tesseron-dev.github.io/tesseron/protocol/compatibility/
 ```
 
 Use a host and gateway that speak the same protocol major.

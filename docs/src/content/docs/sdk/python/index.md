@@ -8,9 +8,9 @@ related:
   - protocol/compatibility
 ---
 
-Source: [github.com/Eigenwise/tesseron-python](https://github.com/Eigenwise/tesseron-python)
+Source: [github.com/tesseron-dev/tesseron-python](https://github.com/tesseron-dev/tesseron-python)
 
-[Report an issue](https://github.com/Eigenwise/tesseron/issues/new/choose?labels=area%3A%20sdk-python)
+[Report an issue](https://github.com/tesseron-dev/tesseron/issues/new/choose?labels=area%3A%20sdk-python)
 
 `tesseron` is the Python host SDK. Your application listens on loopback, the MCP gateway dials in, and the agent gets typed actions and readable resources.
 
@@ -77,7 +77,7 @@ async def main() -> None:
         await host.shutdown()
 ```
 
-The `TodoStore` and `todo_payload` definitions in this excerpt are the ones in [`examples/todo/app.py`](https://github.com/Eigenwise/tesseron-python/blob/main/examples/todo/app.py). The complete example also registers the other canonical actions.
+The `TodoStore` and `todo_payload` definitions in this excerpt are the ones in [`examples/todo/app.py`](https://github.com/tesseron-dev/tesseron-python/blob/main/examples/todo/app.py). The complete example also registers the other canonical actions.
 
 `app.listen()` binds `127.0.0.1` on a port the OS picks, writes the instance manifest the gateway watches for, and answers with a `TesseronHost` carrying the URL and the manifest path. Nothing dials out. The `app.action` and `app.resource` registrations in this example are made before `listen()`; the returned host can register, replace, and remove actions and resources at runtime.
 

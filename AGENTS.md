@@ -31,7 +31,7 @@ repo; do not introduce one.
 - `docs-mcp/`: the docs MCP server published as `@tesseron/docs-mcp`.
 - `conformance/`: language-neutral fixtures and the `conformance/runner` workspace,
   published as `@tesseron/conformance`.
-- `docs/`: the Starlight site at https://eigenwise.github.io/tesseron/.
+- `docs/`: the Starlight site at https://tesseron-dev.github.io/tesseron/.
 - `plugin/`: the Claude Code and Codex plugin. Skills live in `plugin/skills/`,
   MCP wiring in `plugin/.mcp.json`, and the manifest in
   `plugin/.claude-plugin/plugin.json`.
@@ -42,10 +42,10 @@ repo; do not introduce one.
 
 | Language | Repository |
 |---|---|
-| TypeScript | [Eigenwise/tesseron-typescript](https://github.com/Eigenwise/tesseron-typescript) |
-| Rust | [Eigenwise/tesseron-rust](https://github.com/Eigenwise/tesseron-rust) |
-| Python | [Eigenwise/tesseron-python](https://github.com/Eigenwise/tesseron-python) |
-| C++ | [Eigenwise/tesseron-cpp](https://github.com/Eigenwise/tesseron-cpp) |
+| TypeScript | [tesseron-dev/tesseron-typescript](https://github.com/tesseron-dev/tesseron-typescript) |
+| Rust | [tesseron-dev/tesseron-rust](https://github.com/tesseron-dev/tesseron-rust) |
+| Python | [tesseron-dev/tesseron-python](https://github.com/tesseron-dev/tesseron-python) |
+| C++ | [tesseron-dev/tesseron-cpp](https://github.com/tesseron-dev/tesseron-cpp) |
 
 SDK source, examples, tests, and conformance hosts live in those repositories.
 Follow each repository's contributor guide and run its own checks there.

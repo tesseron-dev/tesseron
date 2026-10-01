@@ -1,20 +1,20 @@
 <div align="center">
-  <a href="https://github.com/eigenwise/tesseron">
+  <a href="https://github.com/tesseron-dev/tesseron">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/eigenwise/tesseron/raw/main/assets/logo/tesseron-smallcaps-dark.png">
-      <img src="https://github.com/eigenwise/tesseron/raw/main/assets/logo/tesseron-smallcaps-light.png" alt="Tesseron" width="380">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/tesseron-dev/tesseron/raw/main/assets/logo/tesseron-smallcaps-dark.png">
+      <img src="https://github.com/tesseron-dev/tesseron/raw/main/assets/logo/tesseron-smallcaps-light.png" alt="Tesseron" width="380">
     </picture>
   </a>
 </div>
 
 # @tesseron/mcp
 
-The [Tesseron](https://github.com/eigenwise/tesseron) **MCP gateway** — a local CLI that bridges [`@tesseron/web`](https://www.npmjs.com/package/@tesseron/web) / [`@tesseron/server`](https://www.npmjs.com/package/@tesseron/server) apps to any MCP-compatible AI agent (Claude Code, Claude Desktop, Cursor, Copilot, Codex, ...).
+The [Tesseron](https://github.com/tesseron-dev/tesseron) **MCP gateway** — a local CLI that bridges [`@tesseron/web`](https://www.npmjs.com/package/@tesseron/web) / [`@tesseron/server`](https://www.npmjs.com/package/@tesseron/server) apps to any MCP-compatible AI agent (Claude Code, Claude Desktop, Cursor, Copilot, Codex, ...).
 
 > **Most users don't install this directly.** Use the Claude Code plugin — it bundles the gateway and auto-spawns it:
 >
 > ```text
-> /plugin marketplace add eigenwise/tesseron
+> /plugin marketplace add tesseron-dev/tesseron
 > /plugin install tesseron@tesseron
 > ```
 >
@@ -104,13 +104,13 @@ Same pattern works for Cursor, Codex, VS Code + Copilot, goose, and fast-agent.
 
 | | |
 |---|---|
-| Main repo | <https://github.com/eigenwise/tesseron> |
-| SDK reference | <https://eigenwise.github.io/tesseron/sdk/typescript/mcp/> |
-| Protocol spec | <https://eigenwise.github.io/tesseron/protocol/> |
-| Architecture | <https://eigenwise.github.io/tesseron/overview/architecture/> |
+| Main repo | <https://github.com/tesseron-dev/tesseron> |
+| SDK reference | <https://tesseron-dev.github.io/tesseron/sdk/typescript/mcp/> |
+| Protocol spec | <https://tesseron-dev.github.io/tesseron/protocol/> |
+| Architecture | <https://tesseron-dev.github.io/tesseron/overview/architecture/> |
 
 ## License
 
-Reference implementation — [Business Source License 1.1](https://github.com/eigenwise/tesseron/blob/main/LICENSE) (source-available). You may embed Tesseron in your own apps, run this gateway locally, fork, and redistribute. You may **not** offer Tesseron or a substantial portion of it as a hosted or managed service to third parties. Each release auto-converts to Apache-2.0 four years after publication.
+Reference implementation — [Business Source License 1.1](https://github.com/tesseron-dev/tesseron/blob/main/LICENSE) (source-available). You may embed Tesseron in your own apps, run this gateway locally, fork, and redistribute. You may **not** offer Tesseron or a substantial portion of it as a hosted or managed service to third parties. Each release auto-converts to Apache-2.0 four years after publication.
 
 <p align="center">Built and maintained by <a href="https://eigenwise.io/"><b>Eigenwise</b></a>.</p>

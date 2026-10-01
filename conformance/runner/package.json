@@ -8,14 +8,14 @@
     "email": "kenny@eigenwise.io",
     "url": "https://eigenwise.io/"
   },
-  "homepage": "https://github.com/eigenwise/tesseron/tree/main/conformance#readme",
+  "homepage": "https://github.com/tesseron-dev/tesseron/tree/main/conformance#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eigenwise/tesseron.git",
+    "url": "git+https://github.com/tesseron-dev/tesseron.git",
     "directory": "conformance/runner"
   },
   "bugs": {
-    "url": "https://github.com/eigenwise/tesseron/issues"
+    "url": "https://github.com/tesseron-dev/tesseron/issues"
   },
   "keywords": ["tesseron", "conformance", "protocol", "websocket", "sdk"],
   "type": "module",

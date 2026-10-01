@@ -10,9 +10,9 @@ related:
   - protocol/compatibility
 ---
 
-Source: [github.com/Eigenwise/tesseron-cpp](https://github.com/Eigenwise/tesseron-cpp)
+Source: [github.com/tesseron-dev/tesseron-cpp](https://github.com/tesseron-dev/tesseron-cpp)
 
-[Report an issue](https://github.com/Eigenwise/tesseron/issues/new/choose?labels=area%3A%20sdk-cpp)
+[Report an issue](https://github.com/tesseron-dev/tesseron/issues/new/choose?labels=area%3A%20sdk-cpp)
 
 The C++ SDK lives in `tesseron-cpp` and builds one static library, `tesseron::tesseron`. Your application binds a loopback WebSocket, writes an instance manifest, and the MCP gateway dials *in*. There is no port to configure and no gateway address to point at.
 
@@ -88,7 +88,7 @@ cmake -S . -B build -G Ninja -DTESSERON_BUILD_EXAMPLES=ON
 cmake --build build --target tesseron-example-todo tesseron-example-prompts
 ```
 
-Run the built examples with the gateway installed, then claim the printed code from your MCP client. The [example guide](https://github.com/Eigenwise/tesseron-cpp/tree/main/examples) covers both apps.
+Run the built examples with the gateway installed, then claim the printed code from your MCP client. The [example guide](https://github.com/tesseron-dev/tesseron-cpp/tree/main/examples) covers both apps.
 
 ## Three things that will surprise you
 

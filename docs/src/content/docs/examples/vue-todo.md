@@ -8,7 +8,7 @@ related:
 
 **What it teaches:** integrating Tesseron with Vue 3's reactivity via `@tesseron/vue`. Handlers mutate `todos.value` and the `@tesseron/vite` plugin bridges the browser WebSocket to the gateway.
 
-**Source:** [`examples/vue-todo`](https://github.com/Eigenwise/tesseron-typescript/tree/main/examples/vue-todo)
+**Source:** [`examples/vue-todo`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples/vue-todo)
 
 ## Run it
 

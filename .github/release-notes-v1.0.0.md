@@ -21,7 +21,7 @@ Tesseron is a TypeScript SDK + matching MCP gateway that exposes typed web-app a
 ### Install
 
 ```text
-/plugin marketplace add eigenwise/tesseron
+/plugin marketplace add tesseron-dev/tesseron
 /plugin install tesseron@tesseron
 ```
 
@@ -43,7 +43,7 @@ tesseron
 await tesseron.connect();
 ```
 
-See the [README](https://github.com/eigenwise/tesseron#readme) for the full client compatibility matrix and the [docs site](https://eigenwise.github.io/tesseron/) for the protocol reference, SDK API, and walkthroughs.
+See the [README](https://github.com/tesseron-dev/tesseron#readme) for the full client compatibility matrix and the [docs site](https://tesseron-dev.github.io/tesseron/) for the protocol reference, SDK API, and walkthroughs.
 
 ### License
 
@@ -56,4 +56,4 @@ Phase 4 items (Streamable HTTP transport, devtools UI, `create-tesseron` scaffol
 
 ---
 
-**Full changelog:** see the per-package `CHANGELOG.md` files or [compare view](https://github.com/eigenwise/tesseron/commits/main).
+**Full changelog:** see the per-package `CHANGELOG.md` files or [compare view](https://github.com/tesseron-dev/tesseron/commits/main).

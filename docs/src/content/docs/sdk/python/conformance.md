@@ -7,7 +7,7 @@ related:
   - protocol/handshake
 ---
 
-The [conformance corpus](https://github.com/eigenwise/tesseron/tree/main/conformance) is the executable half of the protocol spec. It is language-neutral: the runner plays the gateway, and any SDK that can stand up a host from a fixture document can be checked against it.
+The [conformance corpus](https://github.com/tesseron-dev/tesseron/tree/main/conformance) is the executable half of the protocol spec. It is language-neutral: the runner plays the gateway, and any SDK that can stand up a host from a fixture document can be checked against it.
 
 ## Running it
 
@@ -29,7 +29,7 @@ The runner cross-checks the unsupported list against the four capability flags t
 - `host-minted-claim` skips the nine `bind/*` fixtures. This host takes gateway-minted claims only.
 - `uds` skips `uds/file-mode`. This host speaks WebSocket only. Set this tag on both platforms.
 
-Those are the only ten skips. WebSocket-only is by design for this release. The [canonical examples](https://github.com/Eigenwise/tesseron-python/tree/main/examples) exercise the same actions through the real gateway.
+Those are the only ten skips. WebSocket-only is by design for this release. The [canonical examples](https://github.com/tesseron-dev/tesseron-python/tree/main/examples) exercise the same actions through the real gateway.
 
 Neither transport is a negotiated capability, so neither is covered by the four flags. Everything the host declares, streaming, subscriptions, sampling, and elicitation, is exercised by the fixtures that run.
 

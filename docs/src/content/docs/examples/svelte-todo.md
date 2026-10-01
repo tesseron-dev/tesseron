@@ -8,7 +8,7 @@ related:
 
 **What it teaches:** integrating Tesseron with Svelte 5's rune-based reactivity via `@tesseron/svelte`. Handlers reassign `$state` variables and Svelte re-renders; the `@tesseron/vite` plugin bridges the browser WebSocket to the gateway.
 
-**Source:** [`examples/svelte-todo`](https://github.com/Eigenwise/tesseron-typescript/tree/main/examples/svelte-todo)
+**Source:** [`examples/svelte-todo`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples/svelte-todo)
 
 ## Run it
 

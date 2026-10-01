@@ -8,7 +8,7 @@
 ### Typed live-app actions for MCP-compatible AI agents, over WebSocket.
 
 <p>
-  <a href="https://github.com/eigenwise/tesseron/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/eigenwise/tesseron?style=flat-square&color=f59e0b&logo=github&labelColor=0b1220"></a>
+  <a href="https://github.com/tesseron-dev/tesseron/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/tesseron-dev/tesseron?style=flat-square&color=f59e0b&logo=github&labelColor=0b1220"></a>
   <a href="./LICENSE"><img alt="License: BUSL-1.1" src="https://img.shields.io/badge/License-BUSL--1.1-f59e0b?style=flat-square&labelColor=0b1220"></a>
   <a href="https://discord.gg/J3W9b5AZJR"><img alt="Discord" src="https://img.shields.io/badge/chat-on%20discord-7289DA?logo=discord&style=flat-square&labelColor=0b1220"></a>
   <img alt="Protocol 1.0.0" src="https://img.shields.io/badge/Protocol-1.0.0-f59e0b?style=flat-square&labelColor=0b1220">
@@ -18,15 +18,15 @@
 </p>
 
 <p>
-  <a href="https://eigenwise.github.io/tesseron/"><b>Docs</b></a> &nbsp;·&nbsp;
+  <a href="https://tesseron-dev.github.io/tesseron/"><b>Docs</b></a> &nbsp;·&nbsp;
   <a href="./examples"><b>Examples</b></a> &nbsp;·&nbsp;
   <a href="#install"><b>Install</b></a> &nbsp;·&nbsp;
   <a href="#packages"><b>Packages</b></a> &nbsp;·&nbsp;
   <a href="https://discord.gg/J3W9b5AZJR"><b>Discord</b></a> &nbsp;·&nbsp;
-  <a href="https://github.com/eigenwise/tesseron/discussions"><b>Discussions</b></a>
+  <a href="https://github.com/tesseron-dev/tesseron/discussions"><b>Discussions</b></a>
 </p>
 
-<sub>Built by <a href="https://eigenwise.io"><b>Eigenwise</b></a></sub>
+<p><b>Created and maintained by <a href="https://eigenwise.io">Eigenwise</a>.</b></p>
 
 </div>
 
@@ -48,7 +48,7 @@ Live applications (browser tabs, Electron/Tauri desktop apps, Node daemons, CLIs
 
 > **It's a protocol, not just a TypeScript library — and not just for the web.** The JS/TS SDKs are the reference implementation and already cover the browser, Node, and desktop (Electron/Tauri). But the wire protocol is [CC BY 4.0](#license) and language-agnostic: anything that can open a WebSocket and speak JSON-RPC 2.0 can host actions, so a Python daemon, a Rust desktop app, or a .NET line-of-business tool can speak it too. Web is simply where the first SDKs landed — not the boundary of what Tesseron is.
 
-WebMCP is a useful browser-native path for public sites that want an assistant to fill forms. The [Tesseron and WebMCP](https://eigenwise.github.io/tesseron/overview/why/#5-tesseron-and-webmcp) section explains the difference, including Tauri and Python processes, cross-app flows, and agents like Claude Code.
+WebMCP is a useful browser-native path for public sites that want an assistant to fill forms. The [Tesseron and WebMCP](https://tesseron-dev.github.io/tesseron/overview/why/#5-tesseron-and-webmcp) section explains the difference, including Tauri and Python processes, cross-app flows, and agents like Claude Code.
 
 <p align="center">
   <img src="./assets/diagrams/pieces-fit-together.png" alt="USER prompts the agent; YOUR APP (browser or Node, using @tesseron/web or /server) opens a loopback WebSocket and announces itself; the MCP GATEWAY (@tesseron/mcp) discovers it via ~/.tesseron/instances/ and dials in; the gateway bridges to the MCP CLIENT (Claude Code, Codex, OpenCode, Pi, Cursor, Claude Desktop, ...) over stdio." width="900">
@@ -70,7 +70,7 @@ Tesseron has first-class install paths for four agent clients. Pick the one you 
 ### Claude Code
 
 ```text
-/plugin marketplace add eigenwise/tesseron
+/plugin marketplace add tesseron-dev/tesseron
 /plugin install tesseron@tesseron
 ```
 
@@ -79,7 +79,7 @@ Installs the [`tesseron`](./plugin) Claude Code plugin. The MCP gateway and docs
 ### Codex CLI
 
 ```bash
-codex plugin marketplace add eigenwise/tesseron
+codex plugin marketplace add tesseron-dev/tesseron
 ```
 
 Codex consumes the same plugin manifest as Claude Code, so the gateway, docs server, and skills come along automatically.
@@ -125,11 +125,11 @@ To also pick up the skill bundle, point OpenCode's `skills.paths` at a clone of 
 
 ### Other MCP clients
 
-Claude Desktop, Cursor, VS Code Copilot, Cline, and any other MCP-compatible client work too — the gateway is plain stdio MCP. See the one-time setup in [`examples/README.md`](https://github.com/Eigenwise/tesseron-typescript/tree/main/examples/README.md#2-wire-the-mcp-gateway-into-your-mcp-client).
+Claude Desktop, Cursor, VS Code Copilot, Cline, and any other MCP-compatible client work too — the gateway is plain stdio MCP. See the one-time setup in [`examples/README.md`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples/README.md#2-wire-the-mcp-gateway-into-your-mcp-client).
 
 ### Then in your app
 
-Drop [`@tesseron/web`](https://github.com/Eigenwise/tesseron-typescript/tree/main/web), [`@tesseron/server`](https://github.com/Eigenwise/tesseron-typescript/tree/main/server), [`@tesseron/react`](https://github.com/Eigenwise/tesseron-typescript/tree/main/react), [`@tesseron/svelte`](https://github.com/Eigenwise/tesseron-typescript/tree/main/svelte), or [`@tesseron/vue`](https://github.com/Eigenwise/tesseron-typescript/tree/main/vue) into your project, declare actions, and let the agent drive your real UI:
+Drop [`@tesseron/web`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/web), [`@tesseron/server`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/server), [`@tesseron/react`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/react), [`@tesseron/svelte`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/svelte), or [`@tesseron/vue`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/vue) into your project, declare actions, and let the agent drive your real UI:
 
 ```ts
 import { tesseron } from '@tesseron/web';
@@ -149,19 +149,19 @@ tesseron
 await tesseron.connect();
 ```
 
-See [`TypeScript examples/`](https://github.com/Eigenwise/tesseron-typescript/tree/main/examples) for working apps in vanilla TS, React, Svelte, Vue, Express, and plain Node.
+See [`TypeScript examples/`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples) for working apps in vanilla TS, React, Svelte, Vue, Express, and plain Node.
 
 ## Packages
 
 | Package | Purpose |
 |---|---|
-| [`@tesseron/core`](https://github.com/Eigenwise/tesseron-typescript/tree/main/core) | Protocol types, action builder. Zero runtime deps beyond Standard Schema. |
-| [`@tesseron/web`](https://github.com/Eigenwise/tesseron-typescript/tree/main/web) | Browser SDK. |
-| [`@tesseron/server`](https://github.com/Eigenwise/tesseron-typescript/tree/main/server) | Node SDK. |
-| [`@tesseron/react`](https://github.com/Eigenwise/tesseron-typescript/tree/main/react) | React hooks adapter. |
-| [`@tesseron/svelte`](https://github.com/Eigenwise/tesseron-typescript/tree/main/svelte) | Svelte 5 adapter. |
-| [`@tesseron/vue`](https://github.com/Eigenwise/tesseron-typescript/tree/main/vue) | Vue 3 adapter. |
-| [`@tesseron/vite`](https://github.com/Eigenwise/tesseron-typescript/tree/main/vite) | Vite plugin: dev-server bridge for browser tabs to dial the gateway over the same origin as your app. |
+| [`@tesseron/core`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/core) | Protocol types, action builder. Zero runtime deps beyond Standard Schema. |
+| [`@tesseron/web`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/web) | Browser SDK. |
+| [`@tesseron/server`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/server) | Node SDK. |
+| [`@tesseron/react`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/react) | React hooks adapter. |
+| [`@tesseron/svelte`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/svelte) | Svelte 5 adapter. |
+| [`@tesseron/vue`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/vue) | Vue 3 adapter. |
+| [`@tesseron/vite`](https://github.com/tesseron-dev/tesseron-typescript/tree/main/vite) | Vite plugin: dev-server bridge for browser tabs to dial the gateway over the same origin as your app. |
 | [`@tesseron/mcp`](./gateway) | MCP gateway server (`tesseron-mcp` CLI; launched by each client's install path via `npx`). |
 | [`@tesseron/docs-mcp`](./docs-mcp) | MCP server that serves the Tesseron docs (`search_docs`, `read_doc`, `list_docs`) for chapter-and-verse spec lookups inside agent sessions. |
 
@@ -190,7 +190,7 @@ For the authoritative, continuously-updated list of which client supports which 
 
 **v1.0** shipped April 2026; the SDK is at **v2.10** as of writing. The protocol is at [**1.2.0**](./docs/src/content/docs/protocol) and intentionally kept small: bidirectional JSON-RPC 2.0 over WebSocket, dynamic MCP tool registration, click-to-connect handshake, streaming progress, cancellation, sampling, confirmation, schema-validated elicitation, subscribable resources, session resume.
 
-The seven TypeScript SDK packages, `@tesseron/{core,web,server,react,svelte,vue,vite}`, share one version and should be installed together. The hub packages `@tesseron/mcp`, `@tesseron/docs-mcp`, and `@tesseron/conformance` release independently. See the [compatibility contract](https://eigenwise.github.io/tesseron/protocol/compatibility/) for cross-language rules.
+The seven TypeScript SDK packages, `@tesseron/{core,web,server,react,svelte,vue,vite}`, share one version and should be installed together. The hub packages `@tesseron/mcp`, `@tesseron/docs-mcp`, and `@tesseron/conformance` release independently. See the [compatibility contract](https://tesseron-dev.github.io/tesseron/protocol/compatibility/) for cross-language rules.
 
 The JS/TS SDKs are the reference implementation; the protocol spec is [CC BY 4.0](./docs/src/content/docs/protocol/LICENSE) so anyone can write a compatible client or server in any language. The [conformance fixtures](./conformance) are the executable half of that.
 
@@ -198,10 +198,10 @@ The JS/TS SDKs are the reference implementation; the protocol spec is [CC BY 4.0
 
 | Language | Source | Install |
 |---|---|---|
-| TypeScript | [tesseron-typescript](https://github.com/Eigenwise/tesseron-typescript) | npm scope `@tesseron`: `core`, `web`, `server`, `react`, `svelte`, `vue`, `vite` |
-| Rust | [tesseron-rust](https://github.com/Eigenwise/tesseron-rust) | crate `tesseron`: `cargo add tesseron` |
-| Python | [tesseron-python](https://github.com/Eigenwise/tesseron-python) | PyPI `tesseron`: `uv add tesseron` |
-| C++ | [tesseron-cpp](https://github.com/Eigenwise/tesseron-cpp) | CMake `FetchContent` from that repo, link `tesseron::tesseron` |
+| TypeScript | [tesseron-typescript](https://github.com/tesseron-dev/tesseron-typescript) | npm scope `@tesseron`: `core`, `web`, `server`, `react`, `svelte`, `vue`, `vite` |
+| Rust | [tesseron-rust](https://github.com/tesseron-dev/tesseron-rust) | crate `tesseron`: `cargo add tesseron` |
+| Python | [tesseron-python](https://github.com/tesseron-dev/tesseron-python) | PyPI `tesseron`: `uv add tesseron` |
+| C++ | [tesseron-cpp](https://github.com/tesseron-dev/tesseron-cpp) | CMake `FetchContent` from that repo, link `tesseron::tesseron` |
 
 All four speak protocol 1.2.0 and pass the shared conformance suite apart from fixtures their transports or claim flow do not support. SDK code and examples live in the language repositories; docs, protocol fixtures, and issues stay here.
 
@@ -226,10 +226,10 @@ Bug reports, protocol refinements, new framework adapters, and improvements to t
 
 ## Star history
 
-<a href="https://star-history.com/#eigenwise/tesseron&Date">
+<a href="https://star-history.com/#tesseron-dev/tesseron&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=eigenwise/tesseron&type=Date&theme=dark">
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=eigenwise/tesseron&type=Date" width="720">
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=tesseron-dev/tesseron&type=Date&theme=dark">
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=tesseron-dev/tesseron&type=Date" width="720">
   </picture>
 </a>
 

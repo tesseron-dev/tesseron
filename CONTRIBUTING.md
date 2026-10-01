@@ -45,7 +45,7 @@ pnpm gate
 ```
 
 See [`README.md`](./README.md) for the package layout, and
-[the TypeScript examples](https://github.com/Eigenwise/tesseron-typescript/tree/main/examples) for working example
+[the TypeScript examples](https://github.com/tesseron-dev/tesseron-typescript/tree/main/examples) for working example
 apps to develop against. SDK source changes belong in the [language repositories](./AGENTS.md#language-sdk-repositories). An SDK release PR is complete only after its corresponding hub docs PR has merged.
 
 ## Where to file what

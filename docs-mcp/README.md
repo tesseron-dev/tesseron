@@ -1,6 +1,6 @@
 # @tesseron/docs-mcp
 
-[Tesseron](https://eigenwise.github.io/tesseron) documentation as an MCP server. Search and read the full protocol + SDK docs from any MCP-compatible AI client: Claude Code, Claude Desktop, Cursor, Windsurf, Zed, and anything else that speaks the [Model Context Protocol](https://modelcontextprotocol.io).
+[Tesseron](https://tesseron-dev.github.io/tesseron) documentation as an MCP server. Search and read the full protocol + SDK docs from any MCP-compatible AI client: Claude Code, Claude Desktop, Cursor, Windsurf, Zed, and anything else that speaks the [Model Context Protocol](https://modelcontextprotocol.io).
 
 No network, no vector store, no API keys. The docs snapshot is bundled in the npm package at publish time. Search runs locally with BM25 over in-memory text.
 

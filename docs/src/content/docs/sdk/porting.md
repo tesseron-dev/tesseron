@@ -123,7 +123,7 @@ Each `on(...)` handler maps to the corresponding builder. Implement progress / s
 
 Before you ship, make sure the SDK passes every line of this list. An SDK that fails any line is not Tesseron-compliant.
 
-Part of this list is executable. Build a small host adapter that reads `TESSERON_CONFORMANCE_FIXTURE`, registers its canned actions and resources, and prints the readiness line described in the [fixture adapter contract](https://github.com/eigenwise/tesseron/blob/main/conformance/README.md). Then run the shipped protocol 1.2 suite:
+Part of this list is executable. Build a small host adapter that reads `TESSERON_CONFORMANCE_FIXTURE`, registers its canned actions and resources, and prints the readiness line described in the [fixture adapter contract](https://github.com/tesseron-dev/tesseron/blob/main/conformance/README.md). Then run the shipped protocol 1.2 suite:
 
 ```bash
 pnpm dlx @tesseron/conformance@1.2.1 --host "./build/tesseron-conformance-host"
@@ -144,7 +144,7 @@ Use `TESSERON_CONFORMANCE_UNSUPPORTED=uds` on platforms without POSIX Unix domai
 
 - [ ] Manifest omits `helloHandledByHost` (or sets it `false`) and carries no `hostMintedClaim`.
 
-*Host-minted (opt-in, [tesseron#60](https://github.com/eigenwise/tesseron/issues/60)).* The host mints the code so the user's paste deterministically picks one agent session instead of racing. Adds the [bind handshake](/protocol/handshake/#host-minted-claims-and-the-bind-handshake) as a hard requirement.
+*Host-minted (opt-in, [tesseron#60](https://github.com/tesseron-dev/tesseron/issues/60)).* The host mints the code so the user's paste deterministically picks one agent session instead of racing. Adds the [bind handshake](/protocol/handshake/#host-minted-claims-and-the-bind-handshake) as a hard requirement.
 
 - [ ] Mints `code`, `sessionId`, and `resumeToken` at instance creation; writes them into `hostMintedClaim` and sets `helloHandledByHost: true`.
 - [ ] Answers the app's own `tesseron/hello` locally with a synthesized welcome; does not forward it until a gateway binds.

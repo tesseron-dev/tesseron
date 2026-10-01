@@ -156,7 +156,7 @@ A developer machine may have several Tesseron MCP gateways alive at once, typica
 
 ### Host-minted claims and the bind handshake
 
-Default since `@tesseron/vite@2.2.0` and `@tesseron/mcp@2.4.0`, and the reason the protocol went to `1.2.0`. See [tesseron#60](https://github.com/eigenwise/tesseron/issues/60).
+Default since `@tesseron/vite@2.2.0` and `@tesseron/mcp@2.4.0`, and the reason the protocol went to `1.2.0`. See [tesseron#60](https://github.com/tesseron-dev/tesseron/issues/60).
 
 The host (Vite plugin, `@tesseron/server`) mints the claim code, session id, and resume token at instance creation, writes them into the manifest's `hostMintedClaim`, and sets `helloHandledByHost: true`. That flag means "do not auto-dial." The host answers its own app's `tesseron/hello` locally with a synthesized welcome, so the user sees a claim code without any gateway involved yet.
 
@@ -211,7 +211,7 @@ The MCP gateway parses `protocolVersion` as `major.minor`:
 - **Exact match** → no logging.
 
 ```json
-{ "jsonrpc": "2.0", "id": 1, "error": { "code": -32000, "message": "Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch. See https://eigenwise.github.io/tesseron/protocol/compatibility/" } }
+{ "jsonrpc": "2.0", "id": 1, "error": { "code": -32000, "message": "Gateway speaks protocol 1.2.0; SDK sent 2.0.0. Major version mismatch. See https://tesseron-dev.github.io/tesseron/protocol/compatibility/" } }
 ```
 
 An SDK also refuses an unreadable welcome result or one from a different major version. It closes that transport and does not run later requests from the rejected session.

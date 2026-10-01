@@ -10,7 +10,7 @@ related:
   - protocol/compatibility
 ---
 
-The [conformance corpus](https://github.com/Eigenwise/tesseron/tree/main/conformance) is language-neutral: a set of JSON fixtures and a Node runner that plays the gateway against whatever host you point it at. The C++ SDK ships a private adapter so it can be pointed at.
+The [conformance corpus](https://github.com/tesseron-dev/tesseron/tree/main/conformance) is language-neutral: a set of JSON fixtures and a Node runner that plays the gateway against whatever host you point it at. The C++ SDK ships a private adapter so it can be pointed at.
 
 ## Where it stands
 
@@ -32,7 +32,7 @@ cmake --build build
 TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.1 --host "./build/conformance-host/tesseron-conformance-host"
 ```
 
-In PowerShell, set `$env:TESSERON_CONFORMANCE_UNSUPPORTED = 'host-minted-claim,uds'` before the `pnpm dlx` command instead of using the Bash environment prefix. Both tags are required on Linux and Windows. The runner uses its bundled corpus; pass `--fixtures <path>` to test a hub checkout's current fixtures. The [example guide](https://github.com/Eigenwise/tesseron-cpp/tree/main/examples) covers running the todo and prompts executables with the gateway.
+In PowerShell, set `$env:TESSERON_CONFORMANCE_UNSUPPORTED = 'host-minted-claim,uds'` before the `pnpm dlx` command instead of using the Bash environment prefix. Both tags are required on Linux and Windows. The runner uses its bundled corpus; pass `--fixtures <path>` to test a hub checkout's current fixtures. The [example guide](https://github.com/tesseron-dev/tesseron-cpp/tree/main/examples) covers running the todo and prompts executables with the gateway.
 
 ## The adapter
 
