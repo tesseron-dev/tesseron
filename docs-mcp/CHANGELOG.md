@@ -1,5 +1,11 @@
 # @tesseron/docs-mcp
 
+## 2.10.8
+
+### Patch Changes
+
+- [`c1b8ceb`](https://github.com/tesseron-dev/tesseron/commit/c1b8cebf671dbe97b47fb1e40708f4c0803b0a16) by @Eigenwise - Pin the published conformance runner at 1.2.2 in the SDK documentation.
+
 ## 2.10.7
 
 ### Patch Changes
