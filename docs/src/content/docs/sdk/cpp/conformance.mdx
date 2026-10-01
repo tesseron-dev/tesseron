@@ -29,7 +29,7 @@ From the `tesseron-cpp` repository root:
 ```bash
 cmake -S . -B build -G Ninja -DTESSERON_BUILD_CONFORMANCE_HOST=ON -DTESSERON_BUILD_EXAMPLES=ON
 cmake --build build
-TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.1 --host "./build/conformance-host/tesseron-conformance-host"
+TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.2 --host "./build/conformance-host/tesseron-conformance-host"
 ```
 
 In PowerShell, set `$env:TESSERON_CONFORMANCE_UNSUPPORTED = 'host-minted-claim,uds'` before the `pnpm dlx` command instead of using the Bash environment prefix. Both tags are required on Linux and Windows. The runner uses its bundled corpus; pass `--fixtures <path>` to test a hub checkout's current fixtures. The [example guide](https://github.com/tesseron-dev/tesseron-cpp/tree/main/examples) covers running the todo and prompts executables with the gateway.

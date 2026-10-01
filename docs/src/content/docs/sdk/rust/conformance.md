@@ -17,7 +17,7 @@ From the `tesseron-rust` repository root, build the private host, then run the p
 
 ```bash
 cargo build --locked -p tesseron-conformance-host
-TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.1 --host "./target/debug/tesseron-conformance-host"
+TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.2 --host "./target/debug/tesseron-conformance-host"
 ```
 
 In PowerShell, set `$env:TESSERON_CONFORMANCE_UNSUPPORTED = 'host-minted-claim,uds'` before the `pnpm dlx` command instead of using the Bash environment prefix. Both tags are required on Linux and Windows. The runner uses its bundled corpus and starts a fresh host for every fixture. Use `--fixtures <path>` to test a hub checkout's current corpus.

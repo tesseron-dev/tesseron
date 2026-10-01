@@ -15,7 +15,7 @@ From the `tesseron-python` repository root:
 
 ```bash
 uv sync --locked
-TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.1 --host "uv run --locked python -m conformance_host"
+TESSERON_CONFORMANCE_UNSUPPORTED=host-minted-claim,uds pnpm dlx @tesseron/conformance@1.2.2 --host "uv run --locked python -m conformance_host"
 ```
 
 In PowerShell, set `$env:TESSERON_CONFORMANCE_UNSUPPORTED = 'host-minted-claim,uds'` before the `pnpm dlx` command instead of using the Bash environment prefix. The runner uses its bundled corpus; pass `--fixtures <path>` to test a hub checkout's current fixtures.
