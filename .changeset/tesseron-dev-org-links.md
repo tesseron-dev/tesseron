@@ -4,4 +4,4 @@
 '@tesseron/conformance': patch
 ---
 
-Point repository, issue tracker, homepage and docs links at the `tesseron-dev` GitHub organization and the `https://tesseron-dev.github.io/tesseron/` docs site. The protocol-mismatch error from `@tesseron/mcp` now links to the docs site at its new address.
+Point repository, issue tracker, homepage and docs links at the `tesseron-dev` GitHub organization and the `https://tesseron-dev.github.io/tesseron/` docs site.
