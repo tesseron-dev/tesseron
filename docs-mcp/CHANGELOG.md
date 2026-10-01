@@ -1,5 +1,11 @@
 # @tesseron/docs-mcp
 
+## 2.10.7
+
+### Patch Changes
+
+- [`7b10a1c`](https://github.com/tesseron-dev/tesseron/commit/7b10a1c0afaf35be318e34845d5c98106b603929) by @Eigenwise - Point repository, issue tracker, homepage and docs links at the `tesseron-dev` GitHub organization and the `https://tesseron-dev.github.io/tesseron/` docs site.
+
 ## 2.10.6
 
 ### Patch Changes
