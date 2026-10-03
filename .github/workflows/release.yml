@@ -31,20 +31,10 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: pnpm
           registry-url: "https://registry.npmjs.org/"
 
-      # Trusted publishing OIDC for the actual `npm publish` PUT requires
-      # npm >= 11.5.1. Node 20 ships npm 10.x which only does OIDC for
-      # provenance signing — the publish itself falls back to bearer-token
-      # auth, hits an empty NODE_AUTH_TOKEN, and returns E404.
-      #
-      # Pinned to the 11.x line, NOT `@latest`. npm 12 dropped Node 20
-      # (engines: ^22.22.2 || ^24.15.0 || >=26.0.0), so `npm@latest` started
-      # failing this step with EBADENGINE and silently broke every release
-      # from 2026-06-10 onward. npm 11 still supports ^20.17.0. Raise this
-      # range only together with the `node-version` above.
       - name: Upgrade npm to a version with trusted-publishing support
         run: npm install -g npm@^11.5.1
 
